@@ -80,6 +80,15 @@ export class BukkitServerSoftwareParser implements Parser {
       );
     }
 
+     // ultimately we log a message for further investigation
+     if (softwareName === 'Unknown') {
+      this.logger.log(
+        'Unknown server software: bukkitVersion="' +
+          bukkitVersion +
+          '"',
+      );
+    }
+
     return [
       new SubmitDataCustomChartDto(
         chart.idCustom,
