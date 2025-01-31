@@ -7,27 +7,41 @@ import { Parser } from './interfaces/parser.interface';
 import { DefaultChart } from '../../charts/interfaces/charts/default-chart.interface';
 
 const serverSoftwareBrands = new Map<string, string>();
-serverSoftwareBrands.set('bukkit', 'Bukkit'); // https://github.com/Bukkit/Bukkit, EOL
-serverSoftwareBrands.set('taco', 'TacoSpigot'); // https://github.com/TacoSpigot/TacoSpigot, EOL
-serverSoftwareBrands.set('paper', 'Paper'); // https://github.com/PaperMC/Paper
-serverSoftwareBrands.set('folia', 'Folia'); // https://github.com/PaperMC/Folia
+// Common server software
 serverSoftwareBrands.set('spigot', 'Spigot'); // https://hub.spigotmc.org/stash/projects/SPIGOT/repos/spigot/browse
-serverSoftwareBrands.set('catserver', 'CatServer'); // https://github.com/Luohuayu/CatServer/
-serverSoftwareBrands.set('lava', 'Lava'); // https://github.com/Timardo/Lava, EOL
-serverSoftwareBrands.set('mohist', 'Mohist'); // https://github.com/MohistMC/Mohist
-serverSoftwareBrands.set('tuinity', 'Tuinity'); // https://github.com/Tuinity/Tuinity, EOL
+serverSoftwareBrands.set('paper', 'Paper'); // https://github.com/PaperMC/Paper
 serverSoftwareBrands.set('purpur', 'Purpur'); // https://github.com/PurpurMC/Purpur
-serverSoftwareBrands.set('airplane', 'Airplane'); // https://github.com/TECHNOVE/Airplane, EOL
-serverSoftwareBrands.set('yatopia', 'Yatopia'); // https://github.com/YatopiaMC/Yatopia, EOL
+serverSoftwareBrands.set('folia', 'Folia'); // https://github.com/PaperMC/Folia
+serverSoftwareBrands.set('mohist', 'Mohist'); // https://github.com/MohistMC/Mohist
 serverSoftwareBrands.set('arclight', 'Arclight'); // https://github.com/IzzelAliz/Arclight
-serverSoftwareBrands.set('magma', 'Magma'); // https://github.com/magmafoundation/Magma, EOL
-serverSoftwareBrands.set('titanium', 'Titanium'); // https://github.com/Mythic-Projects/Titanium, EOL
-serverSoftwareBrands.set('scissors', 'Scissors'); // https://github.com/AtlasMediaGroup/Scissors
-serverSoftwareBrands.set('gale', 'Gale'); // https://github.com/GaleMC/Gale
-serverSoftwareBrands.set('glowstone', 'Glowstone'); // https://github.com/GlowstoneMC/Glowstone, EOL
 serverSoftwareBrands.set('pufferfish', 'Pufferfish'); // https://github.com/pufferfish-gg/Pufferfish
 serverSoftwareBrands.set('leaves', 'Leaves'); // https://github.com/LeavesMC/Leaves
 serverSoftwareBrands.set('leaf', 'Leaf'); // https://github.com/Winds-Studio/Leaf
+serverSoftwareBrands.set('gale', 'Gale'); // https://github.com/GaleMC/Gale | https://github.com/Dreeam-qwq/Gale
+serverSoftwareBrands.set('scissors', 'Scissors'); // https://github.com/AtlasMediaGroup/Scissors
+serverSoftwareBrands.set('catserver', 'CatServer'); // https://github.com/Luohuayu/CatServer/
+
+
+// Some obscure shit
+serverSoftwareBrands.set('axolotl', 'AxolotlSpigot'); // https://www.axolotlspigot.com/
+serverSoftwareBrands.set('axolotl', 'Axolotl'); // https://www.axolotlspigot.com/
+serverSoftwareBrands.set('universespigot', 'UniverseSpigot'); // https://www.axolotlspigot.com/
+serverSoftwareBrands.set('divinemc', 'DivineMC'); // https://github.com/DivineMC/DivineMC
+serverSoftwareBrands.set('shreddedpaper', 'ShreddedPaper'); // https://github.com/MultiPaper/ShreddedPaper
+serverSoftwareBrands.set('plazma', 'Plazma'); // https://github.com/PlazmaMC/PlazmaBukkit
+serverSoftwareBrands.set('advancedslimepaper', 'AdvancedSlimePaper'); // https://github.com/InfernalSuite/AdvancedSlimePaper
+serverSoftwareBrands.set('slimeworldmanager', 'SlimeWorldManager');
+
+// Outdated shit
+serverSoftwareBrands.set('glowstone', 'Glowstone'); // https://github.com/GlowstoneMC/Glowstone, EOL
+serverSoftwareBrands.set('titanium', 'Titanium'); // https://github.com/Mythic-Projects/Titanium, EOL
+serverSoftwareBrands.set('magma', 'Magma'); // https://github.com/magmafoundation/Magma, EOL
+serverSoftwareBrands.set('yatopia', 'Yatopia'); // https://github.com/YatopiaMC/Yatopia, EOL
+serverSoftwareBrands.set('airplane', 'Airplane'); // https://github.com/TECHNOVE/Airplane, EOL
+serverSoftwareBrands.set('tuinity', 'Tuinity'); // https://github.com/Tuinity/Tuinity, EOL
+serverSoftwareBrands.set('lava', 'Lava'); // https://github.com/Timardo/Lava, EOL
+serverSoftwareBrands.set('taco', 'TacoSpigot'); // https://github.com/TacoSpigot/TacoSpigot, EOL
+serverSoftwareBrands.set('bukkit', 'Bukkit'); // https://github.com/Bukkit/Bukkit, EOL
 
 @Injectable()
 export class BukkitServerSoftwareParser implements Parser {
